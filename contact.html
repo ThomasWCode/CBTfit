@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBTfit: Mind & Body</title>
+  <meta name="description" content="Evidence-based Cognitive Behavioural Therapy with a holistic approach to mental and physical wellbeing.">
+  <meta property="og:title" content="CBTfit: Mind & Body">
+  <meta property="og:description" content="Evidence-based Cognitive Behavioural Therapy with a holistic approach to mental and physical wellbeing.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo">
+        <img src="images/logo.png" alt="CBTfit Logo" class="site-header__logo-img">
+        <span class="site-header__logo-text">CBTfit</span>
+      </a>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul class="site-header__nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cbt.html">About CBT</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" style="padding: 4rem 0;">
+    <div class="container hero__content fade-in">
+      <h1 class="hero__title">Get in Touch</h1>
+      <p class="hero__subtitle">Ready to start your journey? Have a question? I'd love to hear from you. Fill out the form below or use the contact details provided.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid fade-in">
+
+        <!-- Form -->
+        <div class="contact-form">
+          <!-- IMPORTANT: Replace YOUR_FORM_ID with your actual Formspree form ID.
+               1. Sign up at https://formspree.io
+               2. Create a new form and get your unique form ID
+               3. Replace 'YOUR_FORM_ID' in the action attribute below -->
+          <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <div class="form-fields">
+              <div class="form-group">
+                <label for="name">Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+                <p class="form-error" id="name-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                <p class="form-error" id="email-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone <span style="font-weight: 400; opacity: 0.7;">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="+44 1234 567 890">
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject <span aria-hidden="true">*</span></label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select a subject...</option>
+                  <option value="initial-consultation">Initial Consultation Enquiry</option>
+                  <option value="general-question">General Question</option>
+                  <option value="fees-and-pricing">Fees and Pricing</option>
+                  <option value="something-else">Something Else</option>
+                </select>
+                <p class="form-error" id="subject-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="message">Message <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" placeholder="Tell us a bit about what brings you here or any questions you have..." required></textarea>
+                <p class="form-error" id="message-error" role="alert"></p>
+              </div>
+              <button type="submit" class="btn btn--primary" style="width: 100%;">Send Message</button>
+            </div>
+            <div class="form-success" id="form-success">
+              <div class="form-success__icon" aria-hidden="true">&#x2705;</div>
+              <p class="form-success__text">Thank you for your message! We'll get back to you as soon as possible.</p>
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="contact-info__item">
+            <span class="contact-info__icon" aria-hidden="true">&#x1f4e7;</span>
+            <div>
+              <div class="contact-info__label">Email</div>
+              <div class="contact-info__value"><a href="mailto:hello@cbtfit.com">hello@cbtfit.com</a></div>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__icon" aria-hidden="true">&#x1f4de;</span>
+            <div>
+              <div class="contact-info__label">Phone</div>
+              <div class="contact-info__value"><a href="tel:+441234567890">+44 1234 567 890</a></div>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__icon" aria-hidden="true">&#x1f4c5;</span>
+            <div>
+              <div class="contact-info__label">Availability</div>
+              <div class="contact-info__value">Monday – Friday: 9am – 6pm<br>Evening appointments available on request</div>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__icon" aria-hidden="true">&#128274;</span>
+            <div>
+              <div class="contact-info__label">Privacy</div>
+              <div class="contact-info__value">All enquiries are treated in the strictest confidence. Your information will never be shared with third parties.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div>
+          <div class="site-footer__brand">CBTfit</div>
+          <p class="site-footer__desc">Evidence-based Cognitive Behavioural Therapy with a holistic approach to mental and physical wellbeing.</p>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Quick Links</h4>
+          <ul class="site-footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cbt.html">About CBT</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Get in Touch</h4>
+          <ul class="site-footer__links">
+            <li><a href="mailto:hello@cbtfit.com">hello@cbtfit.com</a></li>
+            <li><a href="tel:+441234567890">+44 1234 567 890</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 CBTfit: Mind &amp; Body. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
