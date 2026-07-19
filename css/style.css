@@ -232,8 +232,12 @@ a:hover {
   align-items: center;
 }
 
-.two-col--reverse {
-  grid-template-columns: 1fr 1fr;
+.two-col--reverse > *:first-child {
+  order: 2;
+}
+
+.two-col--reverse > *:last-child {
+  order: 1;
 }
 
 .two-col__image {
@@ -440,6 +444,23 @@ a:hover {
 .form-group textarea {
   min-height: 120px;
   resize: vertical;
+}
+
+.form-error {
+  display: none;
+  font-size: 0.8rem;
+  color: #c0392b;
+  margin-top: 0.4rem;
+}
+
+.form-error.visible {
+  display: block;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid,
+.form-group select.invalid {
+  border-color: #c0392b;
 }
 
 /* ---- Contact Info ---- */

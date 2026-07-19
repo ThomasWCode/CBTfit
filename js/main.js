@@ -6,10 +6,11 @@
   'use strict';
 
   /* ---- Active Nav Link Highlight ---- */
-  const currentPath = window.location.pathname.replace(/^\/|\/$/g, '') || 'index';
+  const currentPath = window.location.pathname.replace(/\.html$/, '').replace(/^\/|\/$/g, '') || 'index';
   document.querySelectorAll('.site-header__nav a').forEach(function (link) {
-    const href = link.getAttribute('href').replace(/\.html$/, '');
-    if (href === currentPath || (currentPath === '' && href === 'index')) {
+    const href = link.getAttribute('href').replace(/\.html$/, '').replace(/^\/|\/$/g, '') || 'index';
+    link.classList.remove('active');
+    if (href === currentPath) {
       link.classList.add('active');
     }
   });
