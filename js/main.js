@@ -6,10 +6,10 @@
   'use strict';
 
   /* ---- Active Nav Link Highlight ---- */
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPath = window.location.pathname.replace(/^\/|\/$/g, '') || 'index';
   document.querySelectorAll('.site-header__nav a').forEach(function (link) {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    const href = link.getAttribute('href').replace(/\.html$/, '');
+    if (href === currentPath || (currentPath === '' && href === 'index')) {
       link.classList.add('active');
     }
   });
