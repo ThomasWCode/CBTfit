@@ -5,10 +5,11 @@
 
 /* ---- CSS Custom Properties ---- */
 :root {
-  --font-heading: 'avenir-lt-w01_35-light1475496', 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Outfit', 'Helvetica Neue', Arial, sans-serif;
   --font-body: 'Helvetica', Arial, sans-serif;
-  --color-primary: #36393a;
-  --color-secondary: #727272;
+  --color-primary: #4a4d4e;
+  --color-secondary: #767676;
+  --color-grey-panel: #9a9d9c;
   --color-accent: #ffcb05;
   --color-light: #ffffff;
   --color-bg: #ffffff;
@@ -594,7 +595,7 @@ a:hover {
 }
 
 .cycle-step {
-  background: var(--color-primary);
+  background: var(--color-grey-panel);
   color: var(--color-light);
   padding: 1rem 1.5rem;
   font-weight: 600;
